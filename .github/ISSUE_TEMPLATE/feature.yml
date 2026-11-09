@@ -13,9 +13,8 @@ body:
     id: today
     attributes:
       label: What do you do today instead
-  - type: dropdown
-    id: device
+  - type: textarea
+    id: setup
     attributes:
-      label: Device
-      multiple: true
-      options: [iPhone, iPad, Mac]
+      label: Setup
+      placeholder: Portage 1.0.12 (41) on iPhone, iOS 26.1
