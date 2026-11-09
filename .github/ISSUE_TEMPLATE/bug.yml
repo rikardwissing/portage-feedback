@@ -1,0 +1,56 @@
+name: Report a problem
+description: Something doesn't work as it should
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      placeholder: The film stops after a minute when I cast it to my Chromecast.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open a film from my Jellyfin server
+        2. Cast to the living room Chromecast
+        3. Wait a minute
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      options: [iPhone, iPad, Mac]
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: Source
+      multiple: true
+      options: [Plex, Jellyfin, Emby, Network share (SMB), Network share (WebDAV), Folder, Not about a source]
+  - type: dropdown
+    id: playing
+    attributes:
+      label: Playing on
+      multiple: true
+      options: [This device, AirPlay, Chromecast or Google TV, DLNA TV, Web browser, Not about playback]
+  - type: dropdown
+    id: remote
+    attributes:
+      label: Remote access
+      options: [Not used, WireGuard, Tailscale]
+  - type: input
+    id: version
+    attributes:
+      label: Portage version
+      placeholder: 1.0.12 (41)
+  - type: input
+    id: os
+    attributes:
+      label: OS version
+      placeholder: iOS 26.1
+  - type: markdown
+    attributes:
+      value: Issues are public. Leave out server addresses, account names and tokens.
